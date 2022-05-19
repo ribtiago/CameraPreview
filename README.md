@@ -5,7 +5,7 @@
 Gives the ability to use the camera preview in SwiftUI views.
 
 E.g.
-```
+```swift
 import SwiftUI
 import AVFoundation
 import CameraPreview
