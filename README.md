@@ -1,6 +1,6 @@
 # CameraPreview
 
-A simple `SwiftUI` conversion from `AVCaptureVideoPreviewLayer`.
+`SwiftUI` adaption of `AVCaptureVideoPreviewLayer`.
 
 Gives the ability to use the camera preview in SwiftUI views.
 
