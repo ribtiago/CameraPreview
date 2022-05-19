@@ -1,10 +1,10 @@
 import SwiftUI
 import AVFoundation
 
-struct CameraPreview: UIViewRepresentable {
+public struct CameraPreview: UIViewRepresentable {
     
-    class VideoPreviewView: UIView {
-        override class var layerClass: AnyClass {
+    public class VideoPreviewView: UIView {
+        public override class var layerClass: AnyClass {
              return AVCaptureVideoPreviewLayer.self
         }
         
@@ -15,17 +15,21 @@ struct CameraPreview: UIViewRepresentable {
     
     let session: AVCaptureSession
     
-    var view: VideoPreviewView = {
+    public init(session: AVCaptureSession) {
+        self.session = session
+    }
+    
+    public var view: VideoPreviewView = {
         let view = VideoPreviewView()
         view.backgroundColor = .black
         view.videoPreviewLayer.videoGravity = .resizeAspectFill
         return view
     }()
     
-    func makeUIView(context: Context) -> VideoPreviewView {
+    public func makeUIView(context: Context) -> VideoPreviewView {
         self.view.videoPreviewLayer.session = self.session
         return self.view
     }
     
-    func updateUIView(_ uiView: VideoPreviewView, context: Context) { }
+    public func updateUIView(_ uiView: VideoPreviewView, context: Context) { }
 }
