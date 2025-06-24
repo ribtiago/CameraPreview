@@ -33,3 +33,7 @@ struct MyView: View {
     }
 }
 ```
+
+## License
+
+CameraPreview is released under the MIT license. See the [LICENSE](https://github.com/ribtiago/CameraPreview/blob/main/LICENSE) file for more info.
